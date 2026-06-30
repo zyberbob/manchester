@@ -1,9 +1,11 @@
-# MCR Companion 3.0.1
+# MCR Companion 3.0.2 Polish
 
-Contrast fix version.
+Runde 2 visual polish.
 
-Main changes:
-- stronger text contrast across dashboard, budget, packing and quests
-- quest cards no longer faded
-- improved light/dark text consistency
-- cache/version bump for GitHub Pages refresh
+Changes:
+- darker, cleaner app theme
+- improved hero/dashboard styling
+- better buttons/chips
+- polished cards, quests, budget, packing and journal
+- stronger mobile bottom navigation
+- cache/version bump
