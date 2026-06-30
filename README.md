@@ -1,5 +1,5 @@
-# MCR Companion v6
+# MCR Companion v7
 
-Upload files to GitHub Pages repo root.
+Clean rebuild. Upload all files to GitHub Pages repo root.
 
-New: dashboard, flight/hotel fields, walking tours, food mode, dart mode, memory book export, journal photos, roulette.
+Fixes: no old mini-map text, empty budget by default, all v6 features visible.

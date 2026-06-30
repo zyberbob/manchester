@@ -1,193 +1,34 @@
-<!doctype html>
-<html lang="da">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#050b16">
-<meta name="description" content="MCR Companion for Jonas og Emily">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icon-192.png">
-<title>MCR Companion</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://unpkg.com">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-</head>
-<body>
-<header>
-<h1>MCR Companion</h1>
-<div class="sub">Manchester 2026 • Jonas & Emily • The Gardens Hotel</div>
-<nav>
+<!doctype html><html lang="da"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#050b16">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png">
+<title>MCR Companion</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head><body><header><h1>MCR Companion</h1><div class="sub">Manchester 2026 • Jonas & Emily • The Gardens Hotel</div><nav>
 <a class="pill" href="#home">Home</a><a class="pill" href="#map">Map</a><a class="pill" href="#hungry">Mad</a><a class="pill" href="#dartmode">Dart</a><a class="pill" href="#flight">Flight</a><a class="pill" href="#walks">Walks</a><a class="pill" href="#places">Steder</a><a class="pill" href="#foodbudget">Budget</a><a class="pill" href="#journal">Journal</a><a class="pill" href="#days">Dage</a><a class="pill" href="#ach">🏆</a>
-</nav>
-</header>
-<main>
-<section class="hero" id="home">
-<h2>MCR Companion</h2>
-<div id="netStatus" class="notice">Tjekker status...</div>
-<div class="quick">
-<button class="modeBtn active" data-persona="Begge">👨‍👧 Begge</button>
-<button class="modeBtn" data-persona="Jonas">👨 Jonas</button>
-<button class="modeBtn" data-persona="Emily">👩 Emily</button>
-</div>
+</nav></header><main>
+<section class="hero" id="home"><h2>MCR Companion</h2><div id="netStatus" class="notice">Tjekker status...</div>
+<div class="quick"><button class="modeBtn active" data-persona="Begge">👨‍👧 Begge</button><button class="modeBtn" data-persona="Jonas">👨 Jonas</button><button class="modeBtn" data-persona="Emily">👩 Emily</button></div>
 <input id="search" placeholder="Søg: dart, burger, shopping, Trafford, apotek...">
-<div class="filters">
-<button class="filterBtn active" data-filter="Alle">Alle</button><button class="filterBtn" data-filter="Topvalg">⭐ Topvalg</button><button class="filterBtn" data-filter="Favoritter">❤️ Favoritter</button>
-<button class="filterBtn" data-filter="Dag 1">Dag 1</button><button class="filterBtn" data-filter="Dag 2">Dag 2</button><button class="filterBtn" data-filter="Dag 3">Dag 3</button>
-<button class="filterBtn" data-filter="Mad">Mad</button><button class="filterBtn" data-filter="Dart">Dart</button><button class="filterBtn" data-filter="Shopping">Shopping</button><button class="filterBtn" data-filter="Transport">Transport</button><button class="filterBtn" data-filter="Oplevelser">Oplevelser</button><button class="filterBtn" data-filter="Praktisk">Praktisk</button>
-</div>
-<div class="quick">
-<button class="vibeBtn active" data-vibe="Alle">Alt</button>
-<button class="vibeBtn" data-vibe="sulten">🍔 Sulten</button>
-<button class="vibeBtn" data-vibe="shopping">🛍️ Shopping</button>
-<button class="vibeBtn" data-vibe="dart">🎯 Dart</button>
-<button class="vibeBtn" data-vibe="kaffe">☕ Kaffe</button>
-<button class="vibeBtn" data-vibe="aften">🌙 Aften</button>
-<button class="vibeBtn" data-vibe="regnvejr">🌧️ Regnvejr</button>
-<button class="vibeBtn" data-vibe="billigt">💷 Billigt</button>
-</div>
+<div class="filters"><button class="filterBtn active" data-filter="Alle">Alle</button><button class="filterBtn" data-filter="Topvalg">⭐ Topvalg</button><button class="filterBtn" data-filter="Favoritter">❤️ Favoritter</button><button class="filterBtn" data-filter="Dag 1">Dag 1</button><button class="filterBtn" data-filter="Dag 2">Dag 2</button><button class="filterBtn" data-filter="Dag 3">Dag 3</button><button class="filterBtn" data-filter="Mad">Mad</button><button class="filterBtn" data-filter="Dart">Dart</button><button class="filterBtn" data-filter="Shopping">Shopping</button><button class="filterBtn" data-filter="Transport">Transport</button><button class="filterBtn" data-filter="Oplevelser">Oplevelser</button><button class="filterBtn" data-filter="Praktisk">Praktisk</button></div>
+<div class="quick"><button class="vibeBtn active" data-vibe="Alle">Alt</button><button class="vibeBtn" data-vibe="sulten">🍔 Sulten</button><button class="vibeBtn" data-vibe="shopping">🛍️ Shopping</button><button class="vibeBtn" data-vibe="dart">🎯 Dart</button><button class="vibeBtn" data-vibe="kaffe">☕ Kaffe</button><button class="vibeBtn" data-vibe="aften">🌙 Aften</button><button class="vibeBtn" data-vibe="regnvejr">🌧️ Regnvejr</button><button class="vibeBtn" data-vibe="billigt">💷 Billigt</button></div>
 <div class="kpi"><div><span class="sub">Steder</span><br><b id="statTotal">0</b></div><div><span class="sub">Favoritter</span><br><b id="statFav">0</b></div><div><span class="sub">Besøgt</span><br><b id="statVisited">0</b></div><div><span class="sub">Budget</span><br><b id="statBudget">£0</b></div><div><span class="sub">Vejr</span><br><span id="weather">Online hentes...</span></div></div>
-<div class="dashboardCards">
-<div class="dashCard"><span>💷 Mad tilbage</span><b id="dashFoodLeft">—</b><small>morgenmad er betalt</small></div>
-<div class="dashCard"><span>📍 Tættest på</span><b id="dashNearest">—</b><small>brug GPS for live afstand</small></div>
-<div class="dashCard"><span>🎯 Aftenidé</span><b id="dashEvening">Rat & Pigeon</b><small>stål-dart tæt på</small></div>
-<div class="dashCard"><span>🛍️ Emily pick</span><b id="dashEmily">Afflecks</b><small>vintage / alternativt / nørd</small></div>
-</div>
-<div class="actions" style="margin-top:12px">
-<a class="btn warn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=55%20Piccadilly%2C%20Manchester%20M1%202AP%2C%20United%20Kingdom">🏨 Find hotellet</a>
-<a class="btn secondary" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=55%20Piccadilly%2C%20Manchester%20M1%202AP%2C%20United%20Kingdom&destination=Manchester%20Piccadilly%20Station%2C%20Manchester%20M1%202BN%2C%20United%20Kingdom&travelmode=walking">🚉 Hotel → station</a>
-<button id="gpsBtn" class="btn purple">📍 Brug GPS</button>
-</div>
-<p id="gpsStatus" class="tiny">GPS er frivillig. Uden GPS beregnes afstande fra hotellet.</p>
-<div class="quickActions">
-<button class="bigAction" data-vibe="sulten">🍔<span>Sulten</span></button>
-<button class="bigAction" data-vibe="shopping">🛍️<span>Shopping</span></button>
-<button class="bigAction" data-vibe="dart">🎯<span>Dart</span></button>
-<button class="bigAction" data-vibe="aften">🌙<span>Aften</span></button>
-</div>
-</section>
+<div class="dashboardCards"><div class="dashCard"><span>💷 Mad tilbage</span><b id="dashFoodLeft">—</b><small>morgenmad er betalt</small></div><div class="dashCard"><span>📍 Tættest på</span><b id="dashNearest">—</b><small>brug GPS for live afstand</small></div><div class="dashCard"><span>🎯 Aftenidé</span><b>Rat & Pigeon</b><small>stål-dart tæt på</small></div><div class="dashCard"><span>🛍️ Emily pick</span><b>Afflecks</b><small>vintage / alternativt</small></div></div>
+<div class="actions"><a class="btn warn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=55%20Piccadilly%2C%20Manchester%20M1%202AP%2C%20United%20Kingdom">🏨 Find hotellet</a><a class="btn secondary" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=55%20Piccadilly%2C%20Manchester%20M1%202AP%2C%20United%20Kingdom&destination=Manchester%20Piccadilly%20Station%2C%20Manchester%20M1%202BN%2C%20United%20Kingdom&travelmode=walking">🚉 Hotel → station</a><button id="gpsBtn" class="btn purple">📍 Brug GPS</button></div><p id="gpsStatus" class="tiny">GPS er frivillig. Uden GPS beregnes afstande fra hotellet.</p>
+<div class="quickActions"><button class="bigAction" data-vibe="sulten">🍔<span>Sulten</span></button><button class="bigAction" data-vibe="shopping">🛍️<span>Shopping</span></button><button class="bigAction" data-vibe="dart">🎯<span>Dart</span></button><button class="bigAction" data-vibe="aften">🌙<span>Aften</span></button></div></section>
 
-<section class="section" id="map">
-<div class="mapTools">
-<button class="layerBtn filterBtn active" data-layer="Alle">Alle lag</button>
-<button class="layerBtn filterBtn" data-layer="Mad">🍔 Mad</button>
-<button class="layerBtn filterBtn" data-layer="Dart">🎯 Dart</button>
-<button class="layerBtn filterBtn" data-layer="Shopping">🛍️ Shopping</button>
-<button class="layerBtn filterBtn" data-layer="Transport">🚉 Transport</button>
-<button class="layerBtn filterBtn" data-layer="Oplevelser">⚽ Oplevelser</button>
-<button class="layerBtn filterBtn" data-layer="Praktisk">🛒 Praktisk</button>
-</div>
-<div class="onlineOnly"><div id="leafletMap"></div></div>
-<div class="section" style="margin-top:12px"><h3>Nærmest</h3><div id="nearest"></div></div>
-</section>
+<section class="section" id="map"><div class="mapTools"><button class="layerBtn active" data-layer="Alle">Alle lag</button><button class="layerBtn" data-layer="Mad">🍔 Mad</button><button class="layerBtn" data-layer="Dart">🎯 Dart</button><button class="layerBtn" data-layer="Shopping">🛍️ Shopping</button><button class="layerBtn" data-layer="Transport">🚉 Transport</button><button class="layerBtn" data-layer="Oplevelser">⚽ Oplevelser</button><button class="layerBtn" data-layer="Praktisk">🛒 Praktisk</button></div><div class="onlineOnly"><div id="leafletMap"></div></div><div class="section"><h3>Nærmest</h3><div id="nearest"></div></div></section>
 
-<section class="section" id="foodbudget">
-<h2>Madbudget</h2>
-<p class="note">Morgenmad er betalt på hotellet. Tast beløb i GBP, så viser appen også cirka kroner.</p>
-<div class="budgetSummary">
-<div class="box"><span class="sub">Mad brugt / budget</span><br><span class="moneyBig" id="foodTotal">£0</span><br><span id="foodDkk" class="tiny"></span></div>
-<div class="box"><span class="sub">Tilbage til mad</span><br><span class="moneyBig" id="foodLeft">£0</span><br><span class="tiny">Budget: 600 kr pr. dag</span></div>
-<div class="box"><span class="sub">Alt registreret</span><br><span class="moneyBig" id="budgetTotal">£0</span><br><span id="budgetDkk" class="tiny"></span></div>
-</div>
-<div style="margin:14px 0"><div class="progressWrap"><div id="foodProgress" class="progressBar"></div></div></div>
-<div class="grid">
-<div class="card" id="dayBudget1"></div><div class="card" id="dayBudget2"></div><div class="card" id="dayBudget3"></div><div class="card" id="dayBudget4"></div>
-</div>
-<div class="actions"><button id="addBudget" class="btn">+ Tilføj udgift</button><button id="fxBtn" class="btn secondary">Opdatér kurs</button><button id="clearData" class="btn bad">Nulstil app-data</button></div>
-<label class="tiny">GBP → DKK kurs<input id="rateInput" type="number" step="0.001"></label>
-<div id="budgetRows"></div>
-</section>
+<section class="section" id="hungry"><h2>Mad-mode</h2><p class="note">Vælg hvad I har lyst til.</p><div class="foodGrid"><button class="foodBtn vibeBtn" data-vibe="burger">🍔<b>Burger</b><span>Five Guys</span></button><button class="foodBtn vibeBtn" data-vibe="kylling">🍗<b>Kylling</b><span>Nando's / Wingstop</span></button><button class="foodBtn vibeBtn" data-vibe="pizza">🍕<b>Pizza</b><span>Rudy's</span></button><button class="foodBtn vibeBtn" data-vibe="snack">🥐<b>Hurtigt</b><span>Greggs / Tim Hortons</span></button><button class="foodBtn vibeBtn" data-vibe="kaffe">☕<b>Kaffe</b><span>Starbucks / Costa</span></button><button class="foodBtn vibeBtn" data-vibe="billigt">💷<b>Billigt</b><span>Greggs / Aldi</span></button></div></section>
 
-<section class="section">
-<h2>Hurtige tips</h2>
-<div class="tipBox">
-<div><b>👩 Emily mode</b><br><span class="note">Viser især shopping, caféer, Afflecks, Primark og Trafford.</span></div>
-<div><b>👨 Jonas mode</b><br><span class="note">Viser især dart, Five Guys, Greggs og fodbold/museum.</span></div>
-<div><b>🍔 Sulten</b><br><span class="note">Viser madsteder tæt på og gode backup-løsninger.</span></div>
-<div><b>💷 Madbudget</b><br><span class="note">Tast i pund, se både pund og kroner. Morgenmad tæller ikke med.</span></div>
-</div>
-</section>
+<section class="section" id="dartmode"><h2>Dart-mode</h2><div class="heroMini"><div><b>🎯 Førstevalg</b><br><span>The Rat & Pigeon · 4-5 min</span></div><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=The%20Rat%20%26%20Pigeon%2033%20Back%20Piccadilly%20Manchester">Maps</a></div><div class="tipBox"><div><b>Spørg sådan</b><br><span class="note">Do you have a free dartboard?</span></div><div><b>Backup 1</b><br><span class="note">Smithfield Market Tavern</span></div><div><b>Backup 2</b><br><span class="note">Bay Horse Tavern</span></div></div><div class="actions"><button class="btn secondary filterBtn" data-filter="Dart">Vis dartsteder</button><button class="btn purple vibeBtn" data-vibe="dart">Dart-vibe</button></div></section>
 
+<section class="section" id="flight"><h2>Flight & hotel</h2><p class="note">Gem jeres egne detaljer her. De gemmes kun på telefonen.</p><div class="grid"><div class="card"><h3>✈️ Ud</h3><input data-trip="outFlight" placeholder="Flynummer"><input data-trip="outTime" placeholder="Lander Manchester 13:55, 16 aug"><textarea data-trip="outNotes" placeholder="Gate, booking, noter..."></textarea></div><div class="card"><h3>✈️ Hjem</h3><input data-trip="homeFlight" placeholder="Flynummer"><input data-trip="homeTime" placeholder="Lander CPH 22:20, 20 aug"><textarea data-trip="homeNotes" placeholder="Gate, booking, noter..."></textarea></div><div class="card"><h3>🏨 Hotel</h3><input data-trip="hotelName" value="The Gardens Hotel"><input data-trip="hotelAddress" value="55 Piccadilly, Manchester M1 2AP"><textarea data-trip="hotelNotes" placeholder="Bookingnummer, check-in, ønsker..."></textarea></div></div></section>
 
-<section class="section" id="hungry">
-<h2>Mad-mode</h2>
-<p class="note">Vælg hvad I har lyst til, så filtrerer appen direkte til de bedste muligheder.</p>
-<div class="foodGrid">
-<button class="foodBtn vibeBtn" data-vibe="burger">🍔<b>Burger</b><span>Five Guys</span></button>
-<button class="foodBtn vibeBtn" data-vibe="kylling">🍗<b>Kylling</b><span>Nando's / Wingstop</span></button>
-<button class="foodBtn vibeBtn" data-vibe="pizza">🍕<b>Pizza</b><span>Rudy's</span></button>
-<button class="foodBtn vibeBtn" data-vibe="snack">🥐<b>Hurtigt</b><span>Greggs / Tim Hortons</span></button>
-<button class="foodBtn vibeBtn" data-vibe="kaffe">☕<b>Kaffe</b><span>Starbucks / Costa</span></button>
-<button class="foodBtn vibeBtn" data-vibe="billigt">💷<b>Billigt</b><span>Greggs / Aldi</span></button>
-</div>
-</section>
-
-<section class="section" id="dartmode">
-<h2>Dart-mode</h2>
-<div class="heroMini">
-<div><b>🎯 Førstevalg</b><br><span>The Rat & Pigeon · 4-5 min</span></div>
-<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=The%20Rat%20%26%20Pigeon%2033%20Back%20Piccadilly%20Manchester">Maps</a>
-</div>
-<div class="tipBox">
-<div><b>Spørg sådan</b><br><span class="note">“Do you have a free dartboard?”</span></div>
-<div><b>Backup 1</b><br><span class="note">Smithfield Market Tavern</span></div>
-<div><b>Backup 2</b><br><span class="note">Bay Horse Tavern</span></div>
-</div>
-<div class="actions"><button class="btn secondary filterBtn" data-filter="Dart">Vis dartsteder</button><button class="btn purple vibeBtn" data-vibe="dart">Dart-vibe</button></div>
-</section>
-
-<section class="section" id="flight">
-<h2>Flight & hotel</h2>
-<p class="note">Gem jeres egne detaljer her. De gemmes kun på telefonen.</p>
-<div class="grid">
-<div class="card"><h3>✈️ Ud</h3><input data-trip="outFlight" placeholder="Flynummer"><input data-trip="outTime" placeholder="Lander Manchester 13:55, 16 aug"><textarea data-trip="outNotes" placeholder="Gate, booking, noter..."></textarea></div>
-<div class="card"><h3>✈️ Hjem</h3><input data-trip="homeFlight" placeholder="Flynummer"><input data-trip="homeTime" placeholder="Lander CPH 22:20, 20 aug"><textarea data-trip="homeNotes" placeholder="Gate, booking, noter..."></textarea></div>
-<div class="card"><h3>🏨 Hotel</h3><input data-trip="hotelName" value="The Gardens Hotel"><input data-trip="hotelAddress" value="55 Piccadilly, Manchester M1 2AP"><textarea data-trip="hotelNotes" placeholder="Bookingnummer, check-in, ønsker..."></textarea></div>
-</div>
-</section>
-
-<section class="section" id="walks">
-<h2>Walking tours</h2>
-<div class="grid">
-<div class="card"><h3>🚶 30 min centrum</h3><p class="note">Hotel → Afflecks → Northern Quarter → Greggs → Hotel</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=55%20Piccadilly%2C%20Manchester&destination=55%20Piccadilly%2C%20Manchester&waypoints=Afflecks%20Manchester%7CNorthern%20Quarter%20Manchester%7CGreggs%2093%20Piccadilly%20Manchester&travelmode=walking">Åbn rute</a></div>
-<div class="card"><h3>🛍️ Emily shopping</h3><p class="note">Hotel → Primark → Arndale → Afflecks → Hotel</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=55%20Piccadilly%2C%20Manchester&destination=55%20Piccadilly%2C%20Manchester&waypoints=Primark%20Market%20Street%20Manchester%7CManchester%20Arndale%7CAfflecks%20Manchester&travelmode=walking">Åbn rute</a></div>
-<div class="card"><h3>🎯 Aften</h3><p class="note">Hotel → Nando's → Rat & Pigeon → Hotel</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=55%20Piccadilly%2C%20Manchester&destination=55%20Piccadilly%2C%20Manchester&waypoints=Nando%27s%2027%20Piccadilly%20Manchester%7CThe%20Rat%20%26%20Pigeon%20Manchester&travelmode=walking">Åbn rute</a></div>
-</div>
-</section>
+<section class="section" id="walks"><h2>Walking tours</h2><div class="grid"><div class="card"><h3>🚶 30 min centrum</h3><p class="note">Hotel → Afflecks → Northern Quarter → Greggs → Hotel</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=55%20Piccadilly%2C%20Manchester&destination=55%20Piccadilly%2C%20Manchester&waypoints=Afflecks%20Manchester%7CNorthern%20Quarter%20Manchester%7CGreggs%2093%20Piccadilly%20Manchester&travelmode=walking">Åbn rute</a></div><div class="card"><h3>🛍️ Emily shopping</h3><p class="note">Hotel → Primark → Arndale → Afflecks → Hotel</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=55%20Piccadilly%2C%20Manchester&destination=55%20Piccadilly%2C%20Manchester&waypoints=Primark%20Market%20Street%20Manchester%7CManchester%20Arndale%7CAfflecks%20Manchester&travelmode=walking">Åbn rute</a></div><div class="card"><h3>🎯 Aften</h3><p class="note">Hotel → Nando's → Rat & Pigeon → Hotel</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=55%20Piccadilly%2C%20Manchester&destination=55%20Piccadilly%2C%20Manchester&waypoints=Nando%27s%2027%20Piccadilly%20Manchester%7CThe%20Rat%20%26%20Pigeon%20Manchester&travelmode=walking">Åbn rute</a></div></div></section>
 
 <section class="section" id="places"><h2>Steder</h2><div id="cards" class="grid"></div></section>
+<section class="section" id="foodbudget"><h2>Madbudget</h2><p class="note">Morgenmad er betalt på hotellet. Tast beløb i GBP.</p><div class="budgetSummary"><div class="box"><span class="sub">Mad brugt / budget</span><br><span class="moneyBig" id="foodTotal">£0</span><br><span id="foodDkk" class="tiny"></span></div><div class="box"><span class="sub">Tilbage til mad</span><br><span class="moneyBig" id="foodLeft">£0</span><br><span class="tiny">Budget: 600 kr pr. dag</span></div><div class="box"><span class="sub">Alt registreret</span><br><span class="moneyBig" id="budgetTotal">£0</span><br><span id="budgetDkk" class="tiny"></span></div></div><div class="progressWrap"><div id="foodProgress" class="progressBar"></div></div><div class="grid"><div class="card" id="dayBudget1"></div><div class="card" id="dayBudget2"></div><div class="card" id="dayBudget3"></div><div class="card" id="dayBudget4"></div></div><div class="actions"><button id="addBudget" class="btn">+ Tilføj udgift</button><button id="fxBtn" class="btn secondary">Opdatér kurs</button><button id="clearData" class="btn bad">Nulstil app-data</button></div><label class="tiny">GBP → DKK kurs<input id="rateInput" type="number" step="0.001"></label><div id="budgetRows"></div></section>
 
-<section class="section" id="journal">
-<h2>Rejsejournal</h2>
-<p class="note">Gem små noter, minder og billeder lokalt på telefonen. Billeder gemmes kun på den telefon, hvor de tilføjes.</p>
-<div class="grid">
-<div class="card">
-<h3>📸 Tilføj minde</h3>
-<input id="journalTitle" placeholder="Titel, fx Five Guys eller Dart night">
-<textarea id="journalText" placeholder="Skriv en note..."></textarea>
-<input id="journalPhoto" type="file" accept="image/*" capture="environment">
-<button id="addJournal" class="btn">Gem minde</button><button id="exportMemory" class="btn secondary">Eksportér memory book</button>
-</div>
-<div class="card">
-<h3>🎲 Vælg noget for os</h3>
-<p class="note">Kan ikke beslutte jer? Tryk på en knap.</p>
-<div class="actions">
-<button class="btn secondary spinBtn" data-spin="Mad">Find mad</button>
-<button class="btn secondary spinBtn" data-spin="Shopping">Find shopping</button>
-<button class="btn secondary spinBtn" data-spin="Dart">Find dart</button>
-<button class="btn purple spinBtn" data-spin="Top">Top pick</button>
-</div>
-<div id="spinResult" class="notice" style="margin-top:10px">Klar.</div>
-</div>
-</div>
-<div id="journalList" class="grid" style="margin-top:12px"></div>
-</section>
+<section class="section" id="journal"><h2>Rejsejournal</h2><p class="note">Gem små noter, minder og billeder lokalt på telefonen.</p><div class="grid"><div class="card"><h3>📸 Tilføj minde</h3><input id="journalTitle" placeholder="Titel"><textarea id="journalText" placeholder="Skriv en note..."></textarea><input id="journalPhoto" type="file" accept="image/*" capture="environment"><button id="addJournal" class="btn">Gem minde</button><button id="exportMemory" class="btn secondary">Eksportér memory book</button></div><div class="card"><h3>🎲 Vælg noget for os</h3><div class="actions"><button class="btn secondary spinBtn" data-spin="Mad">Find mad</button><button class="btn secondary spinBtn" data-spin="Shopping">Find shopping</button><button class="btn secondary spinBtn" data-spin="Dart">Find dart</button><button class="btn purple spinBtn" data-spin="Top">Top pick</button></div><div id="spinResult" class="notice">Klar.</div></div></div><div id="journalList" class="grid" style="margin-top:12px"></div></section>
 
-<section class="section" id="days"><h2>Dag-for-dag</h2><div id="daysGrid" class="grid"></div></section>
-<section class="section" id="check"><h2>Rejse-checklist</h2><div id="checklist"></div></section>
-<section class="section" id="ach"><h2>Achievements</h2><div id="achievements" class="achievements"></div></section>
-<section class="section" id="install"><h2>Installér</h2><p><b>Android:</b> Chrome → menu → Installér app.</p><p><b>iPhone:</b> Safari → Del → Føj til hjemmeskærm.</p><button id="installBtn" class="btn installBox">📲 Installér app</button></section>
-</main>
-<div class="footer">MCR Companion v5 • 2026-06-30</div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="app.js"></script>
-<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('./service-worker.js').catch(()=>{});}</script>
-</body></html>
+<section class="section" id="days"><h2>Dag-for-dag</h2><div id="daysGrid" class="grid"></div></section><section class="section" id="check"><h2>Rejse-checklist</h2><div id="checklist"></div></section><section class="section" id="ach"><h2>Achievements</h2><div id="achievements" class="achievements"></div></section><section class="section" id="install"><h2>Installér</h2><p><b>Android:</b> Chrome → menu → Installér app.</p><p><b>iPhone:</b> Safari → Del → Føj til hjemmeskærm.</p><button id="installBtn" class="btn">📲 Installér app</button></section>
+</main><div class="footer">MCR Companion v7 • 2026-06-30</div><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="app.js"></script><script>if('serviceWorker' in navigator){navigator.serviceWorker.register('./service-worker.js').catch(()=>{});}</script></body></html>
