@@ -1,3 +1,4 @@
-# MCR Companion v10
+# MCR Companion v11
 
-Stable full version with map and weather.
+Updated hotel base: Holiday Inn Express Manchester City Centre - Arena.
+Upload all files to GitHub Pages root.
