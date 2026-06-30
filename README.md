@@ -1,5 +1,5 @@
-# MCR Companion 2.1
+# MCR Companion 3.0 Sprint 1
 
-All-in version: hotel config, weather, maps, budget, Ryanair, packing, journal, walking tours, suggestions.
+Leaflet map, live GPS, bottom navigation, live distances, walking target mode, dashboard, budget, Ryanair, packing, journal, quests.
 
 Upload all files/folders to GitHub Pages repo root.

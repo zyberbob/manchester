@@ -6,137 +6,193 @@
 <meta name="theme-color" content="#050b16">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<title>MCR Companion 2.1</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<title>MCR Companion 3.0</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <h1>MCR Companion</h1>
-  <div class="sub">Manchester 2026 • Jonas & Emily • Holiday Inn Express Arena</div>
-  <nav>
-    <a class="pill" href="#home">Home</a>
-    <a class="pill" href="#map">Kort</a>
-    <a class="pill" href="#places">Steder</a>
-    <a class="pill" href="#budget">Budget</a>
-    <a class="pill" href="#assistant">Nu?</a><a class="pill" href="#ryanair">Ryanair</a>
-    <a class="pill" href="#journal">Journal</a>
-    <a class="pill" href="#walks">Walks</a>
-    <a class="pill" href="#pack">Pak</a><a class="pill" href="#check">Checklist</a>
+<div id="app">
+  <header class="topbar">
+    <div>
+      <h1>MCR Companion 3.0</h1>
+      <div class="sub">Manchester 2026 • Jonas & Emily • Holiday Inn Express Arena</div>
+    </div>
+    <button id="gpsHeaderBtn" class="iconBtn">📍</button>
+  </header>
+
+  <main>
+    <section class="screen active" id="screen-home">
+      <section class="hero">
+        <h2 id="hotelTitle">Holiday Inn Express Arena</h2>
+        <div id="status" class="notice">Starter app...</div>
+        <div class="profileSwitch">
+          <button class="modeBtn active" data-persona="Begge">👨‍👧 Begge</button>
+          <button class="modeBtn" data-persona="Jonas">👨 Jonas</button>
+          <button class="modeBtn" data-persona="Emily">👩 Emily</button>
+        </div>
+        <div class="dashboard">
+          <div class="dash"><span>🌦️ Vejr</span><b id="weatherNow">...</b><small id="weatherDetail"></small></div>
+          <div class="dash"><span>📍 GPS</span><b id="gpsStatusMini">Hotel</b><small id="gpsAccuracy"></small></div>
+          <div class="dash"><span>💷 Mad tilbage</span><b id="dashFoodLeft">£0</b><small>Morgenmad betalt</small></div>
+          <div class="dash"><span>🎯 Nærmeste</span><b id="nearestDash">...</b><small id="nearestDashDetail"></small></div>
+        </div>
+        <div class="quickActions">
+          <button class="bigAction" data-vibe="sulten">🍔<span>Sulten</span></button>
+          <button class="bigAction" data-vibe="shopping">🛍️<span>Shopping</span></button>
+          <button class="bigAction" data-vibe="dart">🎯<span>Dart</span></button>
+          <button class="bigAction" data-vibe="aften">🌙<span>Aften</span></button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Hvad skal vi lave nu?</h2>
+        <p class="note">Forslag baseret på profil, vejr, budget og afstand.</p>
+        <div class="actions">
+          <button id="suggestNow" class="btn purple">✨ Foreslå noget</button>
+          <button class="btn secondary vibeBtn" data-vibe="regnvejr">🌧️ Regnvejr</button>
+          <button class="btn secondary vibeBtn" data-vibe="billigt">💷 Billigt</button>
+        </div>
+        <div id="suggestionBox" class="notice">Tryk på knappen.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Nærmest lige nu</h2>
+        <div id="nearestList" class="compactList"></div>
+      </section>
+    </section>
+
+    <section class="screen" id="screen-map">
+      <section class="mapPanel">
+        <div class="mapTop">
+          <div>
+            <h2>Live kort</h2>
+            <div class="tiny">Leaflet + OpenStreetMap + GPS</div>
+          </div>
+          <button id="gpsBtn" class="btn purple">📍 GPS</button>
+        </div>
+        <div id="mapFilters" class="chips"></div>
+        <div id="map"></div>
+        <div id="targetPanel" class="targetPanel hide">
+          <b id="targetName"></b>
+          <span id="targetDistance"></span>
+          <div class="actions">
+            <a id="targetMaps" class="btn" target="_blank">Maps</a>
+            <button id="clearTarget" class="btn secondary">Stop</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="screen" id="screen-places">
+      <section class="panel">
+        <h2>Steder</h2>
+        <input id="search" placeholder="Søg: dart, burger, shopping...">
+        <div id="catFilters" class="chips"></div>
+        <div id="vibeFilters" class="chips"></div>
+        <div id="cards" class="grid"></div>
+      </section>
+    </section>
+
+    <section class="screen" id="screen-budget">
+      <section class="panel">
+        <h2>Budget</h2>
+        <p class="note">Tast i GBP. Morgenmad er betalt på hotellet.</p>
+        <div class="budgetSummary">
+          <div class="box"><span>Mad brugt / budget</span><b id="foodTotal">£0</b><small id="foodDkk"></small></div>
+          <div class="box"><span>Tilbage til mad</span><b id="foodLeft">£0</b><small>600 kr/dag</small></div>
+          <div class="box donutBox"><canvas id="budgetDonut" width="120" height="120"></canvas><small id="budgetDkk"></small></div>
+        </div>
+        <div class="progressWrap"><div id="foodProgress" class="progressBar"></div></div>
+        <div class="actions"><button id="addBudget" class="btn">+ Udgift</button><button id="clearData" class="btn bad">Nulstil</button></div>
+        <label class="tiny">GBP → DKK kurs<input id="rateInput" type="number" step="0.001"></label>
+        <div id="budgetRows"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Pakning & kuffert</h2>
+        <div class="grid">
+          <div class="card"><h3>🧳 20 kg kuffert</h3><p class="note">Sigt efter 12-14 kg ud.</p><input id="bagWeight" type="number" step="0.1" placeholder="Kuffertvægt kg"><div class="progressWrap"><div id="bagProgress" class="progressBar"></div></div><p id="bagText" class="tiny"></p></div>
+          <div class="card"><h3>🎒 Håndbagage</h3><div id="handList"></div></div>
+          <div class="card"><h3>👕 Tøj</h3><div id="packList"></div></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="screen" id="screen-trip">
+      <section class="panel">
+        <h2>Ryanair</h2>
+        <div class="grid">
+          <div class="card"><h3>✈️ Udrejse check-in</h3><p id="outCheckin" class="moneyBig"></p><p class="note">Gratis check-in åbner 15. aug. kl. 12:55.</p></div>
+          <div class="card"><h3>✈️ Hjemrejse check-in</h3><p id="returnCheckin" class="moneyBig"></p><p class="note">Gratis check-in åbner 19. aug. kl. 19:25.</p></div>
+          <div class="card"><h3>🏨 Hotel</h3><p class="note">Holiday Inn Express Manchester City Centre - Arena<br>Off Goadsby Street, Swan Street, M4 5JY</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Holiday%20Inn%20Express%20Manchester%20City%20Centre%20Arena%20Off%20Goadsby%20Street">Maps</a></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Walking tours</h2>
+        <div id="routes" class="grid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Dag-for-dag</h2>
+        <div id="daysGrid" class="grid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Checklist</h2>
+        <div id="checklist"></div>
+      </section>
+    </section>
+
+    <section class="screen" id="screen-journal">
+      <section class="panel">
+        <h2>Journal</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>📸 Tilføj minde</h3>
+            <input id="journalTitle" placeholder="Titel">
+            <textarea id="journalText" placeholder="Note..."></textarea>
+            <input id="journalPhoto" type="file" accept="image/*" capture="environment">
+            <div class="actions"><button id="addJournal" class="btn">Gem</button><button id="exportMemory" class="btn secondary">Eksportér</button></div>
+          </div>
+          <div class="card">
+            <h3>🏆 Quests</h3>
+            <div id="questList" class="questGrid"></div>
+          </div>
+        </div>
+        <div id="journalList" class="grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <button id="fab" class="fab">＋</button>
+  <div id="fabMenu" class="fabMenu hide">
+    <button data-tab="map">🗺 Kort</button>
+    <button id="fabGps">📍 GPS</button>
+    <button id="fabSuggest">✨ Forslag</button>
+    <button data-tab="journal">📸 Journal</button>
+  </div>
+
+  <nav class="bottomNav">
+    <button class="tabBtn active" data-tab="home">🏠<span>Home</span></button>
+    <button class="tabBtn" data-tab="map">🗺<span>Kort</span></button>
+    <button class="tabBtn" data-tab="places">📍<span>Steder</span></button>
+    <button class="tabBtn" data-tab="budget">💷<span>Budget</span></button>
+    <button class="tabBtn" data-tab="trip">✈️<span>Tur</span></button>
+    <button class="tabBtn" data-tab="journal">📸<span>Journal</span></button>
   </nav>
-</header>
-<main>
-<section class="hero" id="home">
-  <h2 id="hotelTitle">Holiday Inn Express Arena</h2>
-  <div id="status" class="notice">Starter app...</div>
-  <div class="quick">
-    <button class="modeBtn active" data-persona="Begge">👨‍👧 Begge</button>
-    <button class="modeBtn" data-persona="Jonas">👨 Jonas</button>
-    <button class="modeBtn" data-persona="Emily">👩 Emily</button>
-  </div>
-  <input id="search" placeholder="Søg: dart, burger, shopping...">
-  <div id="catFilters" class="filters"></div>
-  <div id="vibeFilters" class="quick"></div>
-  <div class="kpi">
-    <div><span class="sub">Steder</span><br><b id="statTotal">0</b></div>
-    <div><span class="sub">Favoritter</span><br><b id="statFav">0</b></div>
-    <div><span class="sub">Besøgt</span><br><b id="statVisited">0</b></div>
-    <div><span class="sub">Budget</span><br><b id="statBudget">£0</b></div>
-  </div>
-  <div class="dashboard">
-    <div class="dash"><span>🌦️ Vejr</span><br><b id="weatherNow">Henter...</b><div id="weatherDetail" class="tiny"></div></div>
-    <div class="dash"><span>💷 Mad tilbage</span><br><b id="dashFoodLeft">£0</b></div>
-    <div class="dash"><span>🎯 Dart tæt på</span><br><b>Rat & Pigeon</b><div class="tiny">2-4 min</div></div>
-    <div class="dash"><span>🛍️ Emily pick</span><br><b>Afflecks</b><div class="tiny">4-5 min</div></div>
-  </div>
-  <div class="quickActions">
-    <button class="bigAction" data-vibe="sulten">🍔<span>Sulten</span></button>
-    <button class="bigAction" data-vibe="shopping">🛍️<span>Shopping</span></button>
-    <button class="bigAction" data-vibe="dart">🎯<span>Dart</span></button>
-    <button class="bigAction" data-vibe="aften">🌙<span>Aften</span></button>
-  </div>
-</section>
+</div>
 
-<section class="section" id="map">
-  <h2>Kort</h2>
-  <div class="quick" id="mapFilters"></div>
-  <iframe id="mapFrame" class="mapFrame" loading="lazy"></iframe>
-  <div class="actions">
-    <a id="hotelMapsBtn" class="btn" target="_blank">Hotel i Maps</a>
-    <a id="foodMapsBtn" class="btn secondary" target="_blank">Mad nær hotel</a>
-    <a id="shoppingMapsBtn" class="btn secondary" target="_blank">Shopping nær hotel</a>
-  </div>
-</section>
-
-<section class="section" id="places"><h2>Steder</h2><div id="cards" class="grid"></div></section>
-
-<section class="section" id="budget">
-  <h2>Madbudget</h2>
-  <p class="note">Morgenmad er betalt på hotellet. Tast i GBP.</p>
-  <div class="budgetSummary">
-    <div class="box"><span class="sub">Mad brugt / budget</span><br><span class="moneyBig" id="foodTotal">£0</span><br><span id="foodDkk" class="tiny"></span></div>
-    <div class="box"><span class="sub">Tilbage til mad</span><br><span class="moneyBig" id="foodLeft">£0</span><br><span class="tiny">Budget: 600 kr pr. dag</span></div>
-    <div class="box"><span class="sub">Alt registreret</span><br><span class="moneyBig" id="budgetTotal">£0</span><br><span id="budgetDkk" class="tiny"></span></div>
-  </div>
-  <div class="progressWrap"><div id="foodProgress" class="progressBar"></div></div>
-  <div class="actions"><button id="addBudget" class="btn">+ Tilføj udgift</button><button id="clearData" class="btn bad">Nulstil app-data</button></div>
-  <label class="tiny">GBP → DKK kurs<input id="rateInput" type="number" step="0.001"></label>
-  <div id="budgetRows"></div>
-</section>
-
-
-<section class="section" id="assistant">
-  <h2>Hvad skal vi lave nu?</h2>
-  <p class="note">Forslag baseret på profil, vejr, budget og jeres gemte steder.</p>
-  <div class="actions">
-    <button id="suggestNow" class="btn purple">✨ Foreslå noget</button>
-    <button class="btn secondary vibeBtn" data-vibe="regnvejr">🌧️ Regnvejr</button>
-    <button class="btn secondary vibeBtn" data-vibe="billigt">💷 Billigt</button>
-    <button class="btn secondary vibeBtn" data-vibe="aften">🌙 Aften</button>
-  </div>
-  <div id="suggestionBox" class="notice">Tryk på knappen.</div>
-</section>
-
-<section class="section" id="ryanair">
-  <h2>Ryanair</h2>
-  <div class="grid">
-    <div class="card"><h3>✈️ Udrejse check-in</h3><p id="outCheckin" class="moneyBig"></p><p class="note">Gratis check-in åbner 15. aug. kl. 12:55.</p></div>
-    <div class="card"><h3>✈️ Hjemrejse check-in</h3><p id="returnCheckin" class="moneyBig"></p><p class="note">Gratis check-in åbner 19. aug. kl. 19:25.</p></div>
-    <div class="card"><h3>🧳 Bagage</h3><p class="note">1 × 20 kg indchecket kuffert + håndbagage.</p><input id="bagWeight" type="number" step="0.1" placeholder="Kuffertvægt kg"><div class="progressWrap"><div id="bagProgress" class="progressBar"></div></div><p id="bagText" class="tiny"></p></div>
-  </div>
-</section>
-
-<section class="section" id="journal">
-  <h2>Rejsejournal</h2>
-  <div class="grid">
-    <div class="card"><h3>📸 Tilføj minde</h3><input id="journalTitle" placeholder="Titel"><textarea id="journalText" placeholder="Note..."></textarea><input id="journalPhoto" type="file" accept="image/*" capture="environment"><button id="addJournal" class="btn">Gem minde</button><button id="exportMemory" class="btn secondary">Eksportér memory book</button></div>
-    <div class="card"><h3>🎲 Vælg noget for os</h3><div class="actions"><button class="btn secondary spinBtn" data-spin="Mad">Find mad</button><button class="btn secondary spinBtn" data-spin="Shopping">Find shopping</button><button class="btn secondary spinBtn" data-spin="Dart">Find dart</button><button class="btn purple spinBtn" data-spin="Top">Top pick</button></div><div id="spinResult" class="notice">Klar.</div></div>
-  </div>
-  <div id="journalList" class="grid"></div>
-</section>
-
-<section class="section" id="walks"><h2>Walking tours</h2><div id="routes" class="grid"></div></section>
-<section class="section" id="days"><h2>Dag-for-dag</h2><div id="daysGrid" class="grid"></div></section>
-
-<section class="section" id="pack">
-  <h2>Pakning & kuffert</h2>
-  <div class="grid">
-    <div class="card"><h3>🧳 20 kg kuffert</h3><p class="note">Sigt efter 12-14 kg ud, så der er plads til shopping hjem.</p><input id="bagWeight2" type="number" step="0.1" placeholder="Kuffertvægt kg"><div class="progressWrap"><div id="bagProgress2" class="progressBar"></div></div><p id="bagText2" class="tiny"></p></div>
-    <div class="card"><h3>🎒 Håndbagage</h3><div id="handList"></div></div>
-    <div class="card"><h3>👕 Tøj</h3><div id="packList"></div></div>
-  </div>
-</section>
-
-<section class="section" id="check"><h2>Checklist</h2><div id="checklist"></div></section>
-<section class="section" id="ach"><h2>Achievements</h2><div id="achievements" class="achievements"></div></section>
-</main>
-<div class="footer">MCR Companion 2.1 • central hotel-config</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="js/config.js"></script>
 <script src="js/state.js"></script>
 <script src="js/utils.js"></script>
-<script src="js/places.js"></script>
 <script src="js/map.js"></script>
+<script src="js/gps.js"></script>
 <script src="js/weather.js"></script>
+<script src="js/places.js"></script>
 <script src="js/budget.js"></script>
+<script src="js/packing.js"></script>
 <script src="js/ryanair.js"></script>
 <script src="js/journal.js"></script>
 <script src="js/routes.js"></script>

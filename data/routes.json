@@ -25,14 +25,6 @@
     ]
   },
   {
-    "title": "🚉 Station",
-    "desc": "Hotel → Manchester Victoria / Piccadilly",
-    "waypoints": [
-      "Manchester Victoria Station",
-      "Manchester Piccadilly Station"
-    ]
-  },
-  {
     "title": "☕ Café / dessert",
     "desc": "Hotel → Federal Café → Black Milk → Afflecks → Hotel",
     "waypoints": [
@@ -57,6 +49,14 @@
       "Northern Quarter Manchester",
       "John Rylands Library Manchester",
       "Canal Street Manchester"
+    ]
+  },
+  {
+    "title": "🚉 Stationer",
+    "desc": "Hotel → Victoria → Piccadilly",
+    "waypoints": [
+      "Manchester Victoria Station",
+      "Manchester Piccadilly Station"
     ]
   }
 ]

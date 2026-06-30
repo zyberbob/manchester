@@ -15,7 +15,8 @@
     ],
     "vibe": [
       "base"
-    ]
+    ],
+    "quest": "Check ind på hotellet"
   },
   {
     "id": "ratpigeon",
@@ -35,7 +36,8 @@
     "vibe": [
       "dart",
       "aften"
-    ]
+    ],
+    "quest": "Spil/kast dart"
   },
   {
     "id": "smithfield",
@@ -55,7 +57,8 @@
     "vibe": [
       "dart",
       "aften"
-    ]
+    ],
+    "quest": "Besøg pub tæt på hotellet"
   },
   {
     "id": "bayhorse",
@@ -75,7 +78,8 @@
     "vibe": [
       "dart",
       "aften"
-    ]
+    ],
+    "quest": "Aftenpub i Northern Quarter"
   },
   {
     "id": "afflecks",
@@ -96,7 +100,8 @@
       "shopping",
       "nørd",
       "regnvejr"
-    ]
+    ],
+    "quest": "Find noget fedt i Afflecks"
   },
   {
     "id": "arndale",
@@ -116,7 +121,8 @@
     "vibe": [
       "shopping",
       "regnvejr"
-    ]
+    ],
+    "quest": "Shopping i Arndale"
   },
   {
     "id": "primark",
@@ -135,7 +141,8 @@
     "vibe": [
       "shopping",
       "billigt"
-    ]
+    ],
+    "quest": "Primark raid"
   },
   {
     "id": "selfridges",
@@ -154,7 +161,8 @@
     ],
     "vibe": [
       "shopping"
-    ]
+    ],
+    "quest": "Kig i Selfridges"
   },
   {
     "id": "trafford",
@@ -175,7 +183,8 @@
       "shopping",
       "heldag",
       "regnvejr"
-    ]
+    ],
+    "quest": "Trafford Centre mission"
   },
   {
     "id": "greggs",
@@ -197,7 +206,8 @@
       "sulten",
       "billigt",
       "snack"
-    ]
+    ],
+    "quest": "Greggs snack"
   },
   {
     "id": "fiveguys",
@@ -219,7 +229,8 @@
       "sulten",
       "burger",
       "aften"
-    ]
+    ],
+    "quest": "Five Guys burger"
   },
   {
     "id": "nandos",
@@ -241,7 +252,8 @@
       "sulten",
       "kylling",
       "aften"
-    ]
+    ],
+    "quest": "Nando’s dinner"
   },
   {
     "id": "thisandthat",
@@ -261,7 +273,8 @@
     "vibe": [
       "sulten",
       "billigt"
-    ]
+    ],
+    "quest": "Rice & three"
   },
   {
     "id": "rudys",
@@ -281,7 +294,50 @@
     "vibe": [
       "sulten",
       "pizza"
-    ]
+    ],
+    "quest": "Pizza night"
+  },
+  {
+    "id": "federal",
+    "cat": "Mad",
+    "emoji": "☕",
+    "name": "Federal Café Northern Quarter",
+    "address": "Federal Cafe Northern Quarter Manchester, United Kingdom",
+    "lat": 53.4834,
+    "lng": -2.2364,
+    "walk": "4-6 min",
+    "note": "Populær café/brunch tæt på hotellet.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "kaffe",
+      "sulten"
+    ],
+    "quest": "Café stop"
+  },
+  {
+    "id": "blackmilk",
+    "cat": "Mad",
+    "emoji": "🍩",
+    "name": "Black Milk Northern Quarter",
+    "address": "Black Milk Northern Quarter Manchester, United Kingdom",
+    "lat": 53.483,
+    "lng": -2.2372,
+    "walk": "5-7 min",
+    "note": "Dessert, shakes og sødt.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "kaffe",
+      "snack"
+    ],
+    "quest": "Dessert stop"
   },
   {
     "id": "northernquarter",
@@ -302,7 +358,8 @@
       "shopping",
       "gåtur",
       "kaffe"
-    ]
+    ],
+    "quest": "Street art walk"
   },
   {
     "id": "nq64",
@@ -324,7 +381,8 @@
       "nørd",
       "aften",
       "regnvejr"
-    ]
+    ],
+    "quest": "Retro game"
   },
   {
     "id": "footballmuseum",
@@ -344,7 +402,8 @@
     "vibe": [
       "fodbold",
       "regnvejr"
-    ]
+    ],
+    "quest": "Football culture"
   },
   {
     "id": "printworks",
@@ -364,270 +423,8 @@
     "vibe": [
       "aften",
       "regnvejr"
-    ]
-  },
-  {
-    "id": "victoria",
-    "cat": "Transport",
-    "emoji": "🚉",
-    "name": "Manchester Victoria Station",
-    "address": "Manchester Victoria Station, Manchester M3 1WY, United Kingdom",
-    "lat": 53.4875,
-    "lng": -2.2426,
-    "walk": "7-9 min",
-    "note": "Tæt station ved hotellet.",
-    "top": true,
-    "persona": [
-      "Begge"
     ],
-    "vibe": [
-      "transport"
-    ]
-  },
-  {
-    "id": "station",
-    "cat": "Transport",
-    "emoji": "🚉",
-    "name": "Manchester Piccadilly Station",
-    "address": "Manchester Piccadilly Station, Manchester M1 2BN, United Kingdom",
-    "lat": 53.4774,
-    "lng": -2.2309,
-    "walk": "12-15 min",
-    "note": "Tog til/fra lufthavn.",
-    "top": true,
-    "persona": [
-      "Begge"
-    ],
-    "vibe": [
-      "transport"
-    ]
-  },
-  {
-    "id": "metrolink",
-    "cat": "Transport",
-    "emoji": "🚋",
-    "name": "Shudehill / Market Street Metrolink",
-    "address": "Shudehill Interchange Manchester, United Kingdom",
-    "lat": 53.4855,
-    "lng": -2.2391,
-    "walk": "4-6 min",
-    "note": "Sporvogn/bus tæt på hotellet.",
-    "top": true,
-    "persona": [
-      "Begge"
-    ],
-    "vibe": [
-      "transport"
-    ]
-  },
-  {
-    "id": "aldi",
-    "cat": "Praktisk",
-    "emoji": "🛒",
-    "name": "Aldi Arndale",
-    "address": "Aldi, Manchester Arndale, Manchester, United Kingdom",
-    "lat": 53.483,
-    "lng": -2.2416,
-    "walk": "6-8 min",
-    "note": "Billigt vand/snacks.",
-    "top": true,
-    "persona": [
-      "Begge"
-    ],
-    "vibe": [
-      "praktisk",
-      "billigt"
-    ]
-  },
-  {
-    "id": "tesco",
-    "cat": "Praktisk",
-    "emoji": "🛒",
-    "name": "Tesco Express Northern Quarter",
-    "address": "Tesco Express Northern Quarter Manchester, United Kingdom",
-    "lat": 53.4838,
-    "lng": -2.2368,
-    "walk": "3-7 min",
-    "note": "Vand, snacks og småting.",
-    "top": true,
-    "persona": [
-      "Begge"
-    ],
-    "vibe": [
-      "praktisk"
-    ]
-  },
-  {
-    "id": "boots",
-    "cat": "Praktisk",
-    "emoji": "💊",
-    "name": "Boots Manchester",
-    "address": "Boots Manchester City Centre, United Kingdom",
-    "lat": 53.482,
-    "lng": -2.241,
-    "walk": "6-10 min",
-    "note": "Apoteksting, hygiene og makeup.",
-    "top": false,
-    "persona": [
-      "Emily",
-      "Begge"
-    ],
-    "vibe": [
-      "praktisk",
-      "shopping"
-    ]
-  },
-  {
-    "id": "hospital",
-    "cat": "Praktisk",
-    "emoji": "🏥",
-    "name": "Manchester Royal Infirmary",
-    "address": "Oxford Road, Manchester M13 9WL, United Kingdom",
-    "lat": 53.4629,
-    "lng": -2.2286,
-    "walk": "Taxi",
-    "note": "Akut: 999. Ikke-akut NHS: 111.",
-    "top": false,
-    "persona": [
-      "Begge"
-    ],
-    "vibe": [
-      "nød"
-    ]
-  },
-  {
-    "id": "coop",
-    "cat": "Praktisk",
-    "emoji": "🛒",
-    "name": "Co-op Food Northern Quarter",
-    "address": "Co-op Food Northern Quarter Manchester, United Kingdom",
-    "lat": 53.4841,
-    "lng": -2.2361,
-    "walk": "3-6 min",
-    "note": "Vand, snacks og småting tæt på hotellet.",
-    "top": false,
-    "persona": [
-      "Begge"
-    ],
-    "vibe": [
-      "praktisk",
-      "billigt"
-    ]
-  },
-  {
-    "id": "mnsfood",
-    "cat": "Praktisk",
-    "emoji": "🛒",
-    "name": "M&S Food Manchester",
-    "address": "M&S Food Manchester City Centre, United Kingdom",
-    "lat": 53.4839,
-    "lng": -2.2416,
-    "walk": "6-9 min",
-    "note": "Lidt bedre snacks, vand og småting.",
-    "top": false,
-    "persona": [
-      "Emily",
-      "Begge"
-    ],
-    "vibe": [
-      "praktisk",
-      "shopping"
-    ]
-  },
-  {
-    "id": "federal",
-    "cat": "Mad",
-    "emoji": "☕",
-    "name": "Federal Café Northern Quarter",
-    "address": "Federal Cafe Northern Quarter Manchester, United Kingdom",
-    "lat": 53.4834,
-    "lng": -2.2364,
-    "walk": "4-6 min",
-    "note": "Populær café/brunch tæt på hotellet.",
-    "top": false,
-    "persona": [
-      "Emily",
-      "Begge"
-    ],
-    "vibe": [
-      "kaffe",
-      "sulten"
-    ]
-  },
-  {
-    "id": "blackmilk",
-    "cat": "Mad",
-    "emoji": "🍩",
-    "name": "Black Milk Northern Quarter",
-    "address": "Black Milk Northern Quarter Manchester, United Kingdom",
-    "lat": 53.483,
-    "lng": -2.2372,
-    "walk": "5-7 min",
-    "note": "Dessert, shakes og sødt.",
-    "top": false,
-    "persona": [
-      "Emily",
-      "Begge"
-    ],
-    "vibe": [
-      "kaffe",
-      "snack"
-    ]
-  },
-  {
-    "id": "atm_arndale",
-    "cat": "Praktisk",
-    "emoji": "🏧",
-    "name": "ATM near Arndale",
-    "address": "ATM Manchester Arndale Manchester, United Kingdom",
-    "lat": 53.4833,
-    "lng": -2.242,
-    "walk": "6-8 min",
-    "note": "Hæveautomat omkring Arndale.",
-    "top": false,
-    "persona": [
-      "Begge"
-    ],
-    "vibe": [
-      "praktisk"
-    ]
-  },
-  {
-    "id": "publictoilet",
-    "cat": "Praktisk",
-    "emoji": "🚻",
-    "name": "Toilets Arndale / Printworks area",
-    "address": "Public toilets Manchester Arndale Manchester, United Kingdom",
-    "lat": 53.484,
-    "lng": -2.241,
-    "walk": "5-8 min",
-    "note": "Arndale/Printworks som praktisk toilet-backup.",
-    "top": false,
-    "persona": [
-      "Begge"
-    ],
-    "vibe": [
-      "praktisk"
-    ]
-  },
-  {
-    "id": "canalstreet",
-    "cat": "Oplevelser",
-    "emoji": "🌈",
-    "name": "Canal Street",
-    "address": "Canal Street, Manchester, United Kingdom",
-    "lat": 53.4779,
-    "lng": -2.2375,
-    "walk": "12-15 min",
-    "note": "Kendt område til en lille aftengåtur.",
-    "top": false,
-    "persona": [
-      "Begge"
-    ],
-    "vibe": [
-      "aften",
-      "gåtur"
-    ]
+    "quest": "Printworks stop"
   },
   {
     "id": "johnrylands",
@@ -647,6 +444,221 @@
     "vibe": [
       "regnvejr",
       "gåtur"
-    ]
+    ],
+    "quest": "Foto ved biblioteket"
+  },
+  {
+    "id": "canalstreet",
+    "cat": "Oplevelser",
+    "emoji": "🌈",
+    "name": "Canal Street",
+    "address": "Canal Street, Manchester, United Kingdom",
+    "lat": 53.4779,
+    "lng": -2.2375,
+    "walk": "12-15 min",
+    "note": "Kendt område til en lille aftengåtur.",
+    "top": false,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "aften",
+      "gåtur"
+    ],
+    "quest": "Canal Street walk"
+  },
+  {
+    "id": "victoria",
+    "cat": "Transport",
+    "emoji": "🚉",
+    "name": "Manchester Victoria Station",
+    "address": "Manchester Victoria Station, Manchester M3 1WY, United Kingdom",
+    "lat": 53.4875,
+    "lng": -2.2426,
+    "walk": "7-9 min",
+    "note": "Tæt station ved hotellet.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "transport"
+    ],
+    "quest": "Find Victoria Station"
+  },
+  {
+    "id": "station",
+    "cat": "Transport",
+    "emoji": "🚉",
+    "name": "Manchester Piccadilly Station",
+    "address": "Manchester Piccadilly Station, Manchester M1 2BN, United Kingdom",
+    "lat": 53.4774,
+    "lng": -2.2309,
+    "walk": "12-15 min",
+    "note": "Tog til/fra lufthavn.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "transport"
+    ],
+    "quest": "Find Piccadilly Station"
+  },
+  {
+    "id": "metrolink",
+    "cat": "Transport",
+    "emoji": "🚋",
+    "name": "Shudehill / Market Street Metrolink",
+    "address": "Shudehill Interchange Manchester, United Kingdom",
+    "lat": 53.4855,
+    "lng": -2.2391,
+    "walk": "4-6 min",
+    "note": "Sporvogn/bus tæt på hotellet.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "transport"
+    ],
+    "quest": "Find tram stop"
+  },
+  {
+    "id": "aldi",
+    "cat": "Praktisk",
+    "emoji": "🛒",
+    "name": "Aldi Arndale",
+    "address": "Aldi, Manchester Arndale, Manchester, United Kingdom",
+    "lat": 53.483,
+    "lng": -2.2416,
+    "walk": "6-8 min",
+    "note": "Billigt vand/snacks.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk",
+      "billigt"
+    ],
+    "quest": "Snack run"
+  },
+  {
+    "id": "tesco",
+    "cat": "Praktisk",
+    "emoji": "🛒",
+    "name": "Tesco Express Northern Quarter",
+    "address": "Tesco Express Northern Quarter Manchester, United Kingdom",
+    "lat": 53.4838,
+    "lng": -2.2368,
+    "walk": "3-7 min",
+    "note": "Vand, snacks og småting.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk"
+    ],
+    "quest": "Water run"
+  },
+  {
+    "id": "coop",
+    "cat": "Praktisk",
+    "emoji": "🛒",
+    "name": "Co-op Food Northern Quarter",
+    "address": "Co-op Food Northern Quarter Manchester, United Kingdom",
+    "lat": 53.4841,
+    "lng": -2.2361,
+    "walk": "3-6 min",
+    "note": "Vand, snacks og småting tæt på hotellet.",
+    "top": false,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk",
+      "billigt"
+    ],
+    "quest": "Co-op run"
+  },
+  {
+    "id": "boots",
+    "cat": "Praktisk",
+    "emoji": "💊",
+    "name": "Boots Manchester",
+    "address": "Boots Manchester City Centre, United Kingdom",
+    "lat": 53.482,
+    "lng": -2.241,
+    "walk": "6-10 min",
+    "note": "Apoteksting, hygiene og makeup.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk",
+      "shopping"
+    ],
+    "quest": "Boots stop"
+  },
+  {
+    "id": "atm_arndale",
+    "cat": "Praktisk",
+    "emoji": "🏧",
+    "name": "ATM near Arndale",
+    "address": "ATM Manchester Arndale Manchester, United Kingdom",
+    "lat": 53.4833,
+    "lng": -2.242,
+    "walk": "6-8 min",
+    "note": "Hæveautomat omkring Arndale.",
+    "top": false,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk"
+    ],
+    "quest": "Find ATM"
+  },
+  {
+    "id": "publictoilet",
+    "cat": "Praktisk",
+    "emoji": "🚻",
+    "name": "Toilets Arndale / Printworks area",
+    "address": "Public toilets Manchester Arndale Manchester, United Kingdom",
+    "lat": 53.484,
+    "lng": -2.241,
+    "walk": "5-8 min",
+    "note": "Arndale/Printworks som praktisk toilet-backup.",
+    "top": false,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk"
+    ],
+    "quest": "Practical backup"
+  },
+  {
+    "id": "hospital",
+    "cat": "Praktisk",
+    "emoji": "🏥",
+    "name": "Manchester Royal Infirmary",
+    "address": "Oxford Road, Manchester M13 9WL, United Kingdom",
+    "lat": 53.4629,
+    "lng": -2.2286,
+    "walk": "Taxi",
+    "note": "Akut: 999. Ikke-akut NHS: 111.",
+    "top": false,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "nød"
+    ],
+    "quest": "Emergency info"
   }
 ]
