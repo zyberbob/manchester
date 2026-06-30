@@ -1,0 +1,35 @@
+[
+  {
+    "title": "🚶 Northern Quarter",
+    "desc": "Hotel → Afflecks → Northern Quarter → Greggs → Hotel",
+    "waypoints": [
+      "Afflecks Manchester",
+      "Northern Quarter Manchester",
+      "Greggs 93 Piccadilly Manchester"
+    ]
+  },
+  {
+    "title": "🛍️ Emily shopping",
+    "desc": "Hotel → Afflecks → Arndale → Primark → Hotel",
+    "waypoints": [
+      "Afflecks Manchester",
+      "Manchester Arndale",
+      "Primark Market Street Manchester"
+    ]
+  },
+  {
+    "title": "🎯 Aften",
+    "desc": "Hotel → Rat & Pigeon → Hotel",
+    "waypoints": [
+      "The Rat & Pigeon Manchester"
+    ]
+  },
+  {
+    "title": "🚉 Station",
+    "desc": "Hotel → Manchester Victoria / Piccadilly",
+    "waypoints": [
+      "Manchester Victoria Station",
+      "Manchester Piccadilly Station"
+    ]
+  }
+]

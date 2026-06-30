@@ -1,0 +1,498 @@
+[
+  {
+    "id": "hotel",
+    "cat": "Base",
+    "emoji": "🏨",
+    "name": "Holiday Inn Express Arena",
+    "address": "Off Goadsby Street, Swan Street, Manchester M4 5JY, United Kingdom",
+    "lat": 53.48505,
+    "lng": -2.2352,
+    "walk": "Base",
+    "note": "Jeres hotelbase ved Northern Quarter / Arena.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "base"
+    ]
+  },
+  {
+    "id": "ratpigeon",
+    "cat": "Dart",
+    "emoji": "🎯",
+    "name": "The Rat & Pigeon",
+    "address": "33 Back Piccadilly, Manchester M1 1HP, United Kingdom",
+    "lat": 53.48225,
+    "lng": -2.2353,
+    "walk": "2-4 min",
+    "note": "Førstevalg til stål-dart tæt på hotellet.",
+    "top": true,
+    "persona": [
+      "Jonas",
+      "Begge"
+    ],
+    "vibe": [
+      "dart",
+      "aften"
+    ]
+  },
+  {
+    "id": "smithfield",
+    "cat": "Dart",
+    "emoji": "🎯",
+    "name": "The Smithfield Market Tavern",
+    "address": "37 Swan Street, Manchester M4 5JZ, United Kingdom",
+    "lat": 53.4844,
+    "lng": -2.2344,
+    "walk": "2-3 min",
+    "note": "Pub-backup meget tæt på hotellet.",
+    "top": true,
+    "persona": [
+      "Jonas",
+      "Begge"
+    ],
+    "vibe": [
+      "dart",
+      "aften"
+    ]
+  },
+  {
+    "id": "bayhorse",
+    "cat": "Dart",
+    "emoji": "🎯",
+    "name": "The Bay Horse Tavern",
+    "address": "35-37 Thomas Street, Manchester M4 1NA, United Kingdom",
+    "lat": 53.48375,
+    "lng": -2.2383,
+    "walk": "4-6 min",
+    "note": "Hyggelig Northern Quarter-pub.",
+    "top": false,
+    "persona": [
+      "Jonas",
+      "Begge"
+    ],
+    "vibe": [
+      "dart",
+      "aften"
+    ]
+  },
+  {
+    "id": "afflecks",
+    "cat": "Shopping",
+    "emoji": "🖤",
+    "name": "Afflecks",
+    "address": "52 Church Street, Manchester M4 1PW, United Kingdom",
+    "lat": 53.48295,
+    "lng": -2.2372,
+    "walk": "4-5 min",
+    "note": "Vintage, alternativ mode, anime/K-pop og nørdeting.",
+    "top": true,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "shopping",
+      "nørd",
+      "regnvejr"
+    ]
+  },
+  {
+    "id": "arndale",
+    "cat": "Shopping",
+    "emoji": "🛍️",
+    "name": "Manchester Arndale",
+    "address": "Manchester Arndale, Manchester M4 3AD, United Kingdom",
+    "lat": 53.4831,
+    "lng": -2.242,
+    "walk": "5-7 min",
+    "note": "Stort shoppingcenter i centrum.",
+    "top": true,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "shopping",
+      "regnvejr"
+    ]
+  },
+  {
+    "id": "primark",
+    "cat": "Shopping",
+    "emoji": "🛒",
+    "name": "Primark Market Street",
+    "address": "106-122 Market Street, Manchester M1 1WA, United Kingdom",
+    "lat": 53.4826,
+    "lng": -2.2394,
+    "walk": "7-9 min",
+    "note": "Billig tøjshopping.",
+    "top": true,
+    "persona": [
+      "Emily"
+    ],
+    "vibe": [
+      "shopping",
+      "billigt"
+    ]
+  },
+  {
+    "id": "selfridges",
+    "cat": "Shopping",
+    "emoji": "🛍️",
+    "name": "Selfridges Manchester Exchange",
+    "address": "1 Exchange Square, Manchester M3 1BD, United Kingdom",
+    "lat": 53.4844,
+    "lng": -2.2435,
+    "walk": "7-8 min",
+    "note": "Pænere shopping ved Arndale.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "shopping"
+    ]
+  },
+  {
+    "id": "trafford",
+    "cat": "Shopping",
+    "emoji": "🏬",
+    "name": "Trafford Centre",
+    "address": "The Trafford Centre, Trafford Park, Stretford, Manchester M17 8AA, United Kingdom",
+    "lat": 53.4668,
+    "lng": -2.3499,
+    "walk": "25-35 min transport",
+    "note": "Kæmpe shoppingcenter. Halv/hel dag.",
+    "top": true,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "shopping",
+      "heldag",
+      "regnvejr"
+    ]
+  },
+  {
+    "id": "greggs",
+    "cat": "Mad",
+    "emoji": "🥐",
+    "name": "Greggs Piccadilly",
+    "address": "93 Piccadilly, Manchester, United Kingdom",
+    "lat": 53.48075,
+    "lng": -2.23475,
+    "walk": "7-9 min",
+    "note": "Billig snack/frokost. Morgenmad er på hotellet.",
+    "top": true,
+    "persona": [
+      "Jonas",
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "sulten",
+      "billigt",
+      "snack"
+    ]
+  },
+  {
+    "id": "fiveguys",
+    "cat": "Mad",
+    "emoji": "🍔",
+    "name": "Five Guys Piccadilly Gardens",
+    "address": "17 Piccadilly, Manchester M1 1LS, United Kingdom",
+    "lat": 53.48105,
+    "lng": -2.23775,
+    "walk": "8-10 min",
+    "note": "Burger, fries og milkshake.",
+    "top": true,
+    "persona": [
+      "Jonas",
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "sulten",
+      "burger",
+      "aften"
+    ]
+  },
+  {
+    "id": "nandos",
+    "cat": "Mad",
+    "emoji": "🍗",
+    "name": "Nando's Manchester Piccadilly",
+    "address": "27 Piccadilly, Manchester M1 1LU, United Kingdom",
+    "lat": 53.4811,
+    "lng": -2.23855,
+    "walk": "8-10 min",
+    "note": "PERi-PERi kylling.",
+    "top": true,
+    "persona": [
+      "Jonas",
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "sulten",
+      "kylling",
+      "aften"
+    ]
+  },
+  {
+    "id": "thisandthat",
+    "cat": "Mad",
+    "emoji": "🍛",
+    "name": "This & That",
+    "address": "3 Soap Street, Manchester M4 1EW, United Kingdom",
+    "lat": 53.4832,
+    "lng": -2.2357,
+    "walk": "4-5 min",
+    "note": "Klassisk Manchester rice & three curry.",
+    "top": false,
+    "persona": [
+      "Jonas",
+      "Begge"
+    ],
+    "vibe": [
+      "sulten",
+      "billigt"
+    ]
+  },
+  {
+    "id": "rudys",
+    "cat": "Mad",
+    "emoji": "🍕",
+    "name": "Rudy's Pizza",
+    "address": "Rudy's Pizza Manchester, United Kingdom",
+    "lat": 53.4802,
+    "lng": -2.2382,
+    "walk": "8-12 min",
+    "note": "Populær napolitansk pizza.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "sulten",
+      "pizza"
+    ]
+  },
+  {
+    "id": "northernquarter",
+    "cat": "Oplevelser",
+    "emoji": "🎨",
+    "name": "Northern Quarter",
+    "address": "Northern Quarter, Manchester, United Kingdom",
+    "lat": 53.4825,
+    "lng": -2.235,
+    "walk": "0-5 min",
+    "note": "Street art, caféer og små butikker lige ved hotellet.",
+    "top": true,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "shopping",
+      "gåtur",
+      "kaffe"
+    ]
+  },
+  {
+    "id": "nq64",
+    "cat": "Oplevelser",
+    "emoji": "🎮",
+    "name": "NQ64 Northern Quarter",
+    "address": "9 Short Street, Manchester M4 1AA, United Kingdom",
+    "lat": 53.4825,
+    "lng": -2.2359,
+    "walk": "3-4 min",
+    "note": "Retro arcade-bar. Tjek aldersregler.",
+    "top": false,
+    "persona": [
+      "Jonas",
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "nørd",
+      "aften",
+      "regnvejr"
+    ]
+  },
+  {
+    "id": "footballmuseum",
+    "cat": "Oplevelser",
+    "emoji": "⚽",
+    "name": "National Football Museum",
+    "address": "Urbis Building, Cathedral Gardens, Todd Street, Manchester M4 3BG, United Kingdom",
+    "lat": 53.4853,
+    "lng": -2.2425,
+    "walk": "7-9 min",
+    "note": "Fodboldmuseum i centrum.",
+    "top": false,
+    "persona": [
+      "Jonas",
+      "Begge"
+    ],
+    "vibe": [
+      "fodbold",
+      "regnvejr"
+    ]
+  },
+  {
+    "id": "printworks",
+    "cat": "Oplevelser",
+    "emoji": "🎬",
+    "name": "Printworks Manchester",
+    "address": "27 Withy Grove, Manchester M4 2BS, United Kingdom",
+    "lat": 53.4852,
+    "lng": -2.241,
+    "walk": "5-6 min",
+    "note": "Mad, biograf og underholdning tæt på.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "aften",
+      "regnvejr"
+    ]
+  },
+  {
+    "id": "victoria",
+    "cat": "Transport",
+    "emoji": "🚉",
+    "name": "Manchester Victoria Station",
+    "address": "Manchester Victoria Station, Manchester M3 1WY, United Kingdom",
+    "lat": 53.4875,
+    "lng": -2.2426,
+    "walk": "7-9 min",
+    "note": "Tæt station ved hotellet.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "transport"
+    ]
+  },
+  {
+    "id": "station",
+    "cat": "Transport",
+    "emoji": "🚉",
+    "name": "Manchester Piccadilly Station",
+    "address": "Manchester Piccadilly Station, Manchester M1 2BN, United Kingdom",
+    "lat": 53.4774,
+    "lng": -2.2309,
+    "walk": "12-15 min",
+    "note": "Tog til/fra lufthavn.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "transport"
+    ]
+  },
+  {
+    "id": "metrolink",
+    "cat": "Transport",
+    "emoji": "🚋",
+    "name": "Shudehill / Market Street Metrolink",
+    "address": "Shudehill Interchange Manchester, United Kingdom",
+    "lat": 53.4855,
+    "lng": -2.2391,
+    "walk": "4-6 min",
+    "note": "Sporvogn/bus tæt på hotellet.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "transport"
+    ]
+  },
+  {
+    "id": "aldi",
+    "cat": "Praktisk",
+    "emoji": "🛒",
+    "name": "Aldi Arndale",
+    "address": "Aldi, Manchester Arndale, Manchester, United Kingdom",
+    "lat": 53.483,
+    "lng": -2.2416,
+    "walk": "6-8 min",
+    "note": "Billigt vand/snacks.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk",
+      "billigt"
+    ]
+  },
+  {
+    "id": "tesco",
+    "cat": "Praktisk",
+    "emoji": "🛒",
+    "name": "Tesco Express Northern Quarter",
+    "address": "Tesco Express Northern Quarter Manchester, United Kingdom",
+    "lat": 53.4838,
+    "lng": -2.2368,
+    "walk": "3-7 min",
+    "note": "Vand, snacks og småting.",
+    "top": true,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk"
+    ]
+  },
+  {
+    "id": "boots",
+    "cat": "Praktisk",
+    "emoji": "💊",
+    "name": "Boots Manchester",
+    "address": "Boots Manchester City Centre, United Kingdom",
+    "lat": 53.482,
+    "lng": -2.241,
+    "walk": "6-10 min",
+    "note": "Apoteksting, hygiene og makeup.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk",
+      "shopping"
+    ]
+  },
+  {
+    "id": "hospital",
+    "cat": "Praktisk",
+    "emoji": "🏥",
+    "name": "Manchester Royal Infirmary",
+    "address": "Oxford Road, Manchester M13 9WL, United Kingdom",
+    "lat": 53.4629,
+    "lng": -2.2286,
+    "walk": "Taxi",
+    "note": "Akut: 999. Ikke-akut NHS: 111.",
+    "top": false,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "nød"
+    ]
+  }
+]
