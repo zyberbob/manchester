@@ -1,5 +1,9 @@
-# MCR Companion 3.0 Sprint 1
+# MCR Companion 3.0.1
 
-Leaflet map, live GPS, bottom navigation, live distances, walking target mode, dashboard, budget, Ryanair, packing, journal, quests.
+Contrast fix version.
 
-Upload all files/folders to GitHub Pages repo root.
+Main changes:
+- stronger text contrast across dashboard, budget, packing and quests
+- quest cards no longer faded
+- improved light/dark text consistency
+- cache/version bump for GitHub Pages refresh

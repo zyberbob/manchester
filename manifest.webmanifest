@@ -1,6 +1,6 @@
 {
-  "name": "MCR Companion 3.0",
-  "short_name": "MCR 3",
+  "name": "MCR Companion 3.0.1",
+  "short_name": "MCR 3.0.1",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

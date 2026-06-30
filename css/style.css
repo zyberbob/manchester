@@ -17,3 +17,57 @@ input,textarea,select{width:100%;padding:13px;border-radius:15px;border:1px soli
 .fab{position:fixed;right:18px;bottom:88px;z-index:1001;width:58px;height:58px;border-radius:50%;border:0;background:#38bdf8;color:#00111c;font-size:30px;font-weight:950;box-shadow:0 10px 30px rgba(0,0,0,.45)}.fabMenu{position:fixed;right:18px;bottom:154px;z-index:1001;background:#0b1220;border:1px solid #334155;border-radius:18px;padding:8px;display:grid;gap:6px}.fabMenu button{border:0;background:#12233a;color:white;border-radius:12px;padding:10px 13px;text-align:left}
 .compactList{display:grid;gap:8px}.compactItem{background:#0b1220;border:1px solid #334155;border-radius:16px;padding:11px;display:flex;justify-content:space-between;gap:8px;align-items:center}.compactItem b{display:block}.moneyBig{font-size:28px;font-weight:950}.budgetrow{display:grid;grid-template-columns:1.1fr .8fr .7fr 44px;gap:8px;align-items:center;margin:8px 0}.budgetrow input,.budgetrow select{margin:0}.progressWrap{background:#07111f;border:1px solid #334155;border-radius:999px;overflow:hidden;height:16px}.progressBar{height:100%;background:linear-gradient(90deg,var(--good),var(--accent));width:0%}.progressBar.warn{background:linear-gradient(90deg,var(--warn),var(--bad))}.checkline,.miniList label{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid #23334d}.checkline input,.miniList input{width:auto;margin:0;transform:scale(1.25)}.fav{background:#334155;color:#fff}.fav.on{background:var(--gold);color:#111827}.visited.on{background:var(--good);color:#03120a}.questGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}.quest{background:#0b1220;border:1px solid #334155;border-radius:14px;padding:10px;opacity:.55}.quest.on{opacity:1;border-color:#facc15}.journalImg{width:100%;border-radius:14px;border:1px solid #334155;margin-top:8px;max-height:260px;object-fit:cover}
 @media(max-width:620px){.quickActions{grid-template-columns:repeat(2,1fr)}.budgetrow{grid-template-columns:1fr 78px}.budgetrow select,.budgetrow button{grid-column:auto}.mapPanel{height:calc(100vh - 128px);min-height:560px}}
+
+
+/* v31 contrast fix */
+:root{
+  --text-strong:#f8fafc;
+  --text-soft:#dbe7f3;
+  --text-muted:#bfd1e4;
+}
+body{color:var(--text-strong);}
+.hero h2,.hero h3,.hero .sub{color:#04111d;}
+.hero .dash,.hero .dash b,.hero .dash small,.hero .dash span,
+.hero .bigAction,.hero .bigAction span{color:var(--text-strong)!important;}
+.panel h2,.panel h3,.panel p,.panel b,.panel span,.panel small,
+.card h2,.card h3,.card p,.card b,.card span,.card small,
+.notice,.compactItem,.compactItem b,.compactItem small,
+.budgetSummary .box,.budgetSummary .box b,.budgetSummary .box small,.budgetSummary .box span,
+.dash b,#gpsStatusMini,#nearestDash,#nearestDashDetail,#dashFoodLeft,#weatherNow,#weatherDetail,
+.moneyBig,#outCheckin,#returnCheckin,#foodTotal,#foodLeft,#foodDkk,#budgetDkk,#bagText{
+  color:var(--text-strong)!important;
+}
+.note,.tiny,.sub,.dash span,.budgetSummary span,.badge{
+  color:var(--text-muted)!important;
+}
+.miniList label,.miniList label span,.checkline,.checkline span,
+.quest,.quest span,.questGrid .quest,
+summary,details,details summary{
+  color:var(--text-strong)!important;
+}
+.quest{
+  opacity:1 !important;
+  background:#101b2d;
+  border-color:#41536d;
+}
+.quest.on{
+  border-color:#facc15;
+  box-shadow:0 0 0 1px rgba(250,204,21,.2) inset;
+}
+.card,.panel,.hero,.dash,.budgetSummary .box,.compactItem,.notice{
+  box-shadow:0 10px 26px rgba(0,0,0,.24);
+}
+.btn.secondary{
+  background:#dbeafe;
+  color:#0f172a;
+}
+input::placeholder, textarea::placeholder{
+  color:#8ea4bc;
+}
+select, option, input, textarea{
+  color:var(--text-strong);
+}
+::selection{
+  background:#60a5fa;
+  color:#08111f;
+}
