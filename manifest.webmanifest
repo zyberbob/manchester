@@ -1,5 +1,5 @@
 {
-  "name": "MCR Companion 2.0",
+  "name": "MCR Companion 2.1",
   "short_name": "MCR",
   "start_url": "./index.html",
   "scope": "./",
@@ -17,5 +17,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "description": "All-in Manchester companion for Jonas og Emily"
 }

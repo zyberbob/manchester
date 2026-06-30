@@ -31,5 +31,32 @@
       "Manchester Victoria Station",
       "Manchester Piccadilly Station"
     ]
+  },
+  {
+    "title": "☕ Café / dessert",
+    "desc": "Hotel → Federal Café → Black Milk → Afflecks → Hotel",
+    "waypoints": [
+      "Federal Cafe Northern Quarter Manchester",
+      "Black Milk Northern Quarter Manchester",
+      "Afflecks Manchester"
+    ]
+  },
+  {
+    "title": "🌧️ Regnvejr",
+    "desc": "Hotel → Afflecks → Arndale → Printworks → Hotel",
+    "waypoints": [
+      "Afflecks Manchester",
+      "Manchester Arndale",
+      "Printworks Manchester"
+    ]
+  },
+  {
+    "title": "📚 Pæn gåtur",
+    "desc": "Hotel → Northern Quarter → John Rylands Library → Canal Street → Hotel",
+    "waypoints": [
+      "Northern Quarter Manchester",
+      "John Rylands Library Manchester",
+      "Canal Street Manchester"
+    ]
   }
 ]

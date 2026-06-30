@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#050b16">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<title>MCR Companion 2.0</title>
+<title>MCR Companion 2.1</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,10 +18,10 @@
     <a class="pill" href="#map">Kort</a>
     <a class="pill" href="#places">Steder</a>
     <a class="pill" href="#budget">Budget</a>
-    <a class="pill" href="#ryanair">Ryanair</a>
+    <a class="pill" href="#assistant">Nu?</a><a class="pill" href="#ryanair">Ryanair</a>
     <a class="pill" href="#journal">Journal</a>
     <a class="pill" href="#walks">Walks</a>
-    <a class="pill" href="#check">Checklist</a>
+    <a class="pill" href="#pack">Pak</a><a class="pill" href="#check">Checklist</a>
   </nav>
 </header>
 <main>
@@ -83,6 +83,19 @@
   <div id="budgetRows"></div>
 </section>
 
+
+<section class="section" id="assistant">
+  <h2>Hvad skal vi lave nu?</h2>
+  <p class="note">Forslag baseret på profil, vejr, budget og jeres gemte steder.</p>
+  <div class="actions">
+    <button id="suggestNow" class="btn purple">✨ Foreslå noget</button>
+    <button class="btn secondary vibeBtn" data-vibe="regnvejr">🌧️ Regnvejr</button>
+    <button class="btn secondary vibeBtn" data-vibe="billigt">💷 Billigt</button>
+    <button class="btn secondary vibeBtn" data-vibe="aften">🌙 Aften</button>
+  </div>
+  <div id="suggestionBox" class="notice">Tryk på knappen.</div>
+</section>
+
 <section class="section" id="ryanair">
   <h2>Ryanair</h2>
   <div class="grid">
@@ -103,10 +116,20 @@
 
 <section class="section" id="walks"><h2>Walking tours</h2><div id="routes" class="grid"></div></section>
 <section class="section" id="days"><h2>Dag-for-dag</h2><div id="daysGrid" class="grid"></div></section>
+
+<section class="section" id="pack">
+  <h2>Pakning & kuffert</h2>
+  <div class="grid">
+    <div class="card"><h3>🧳 20 kg kuffert</h3><p class="note">Sigt efter 12-14 kg ud, så der er plads til shopping hjem.</p><input id="bagWeight2" type="number" step="0.1" placeholder="Kuffertvægt kg"><div class="progressWrap"><div id="bagProgress2" class="progressBar"></div></div><p id="bagText2" class="tiny"></p></div>
+    <div class="card"><h3>🎒 Håndbagage</h3><div id="handList"></div></div>
+    <div class="card"><h3>👕 Tøj</h3><div id="packList"></div></div>
+  </div>
+</section>
+
 <section class="section" id="check"><h2>Checklist</h2><div id="checklist"></div></section>
 <section class="section" id="ach"><h2>Achievements</h2><div id="achievements" class="achievements"></div></section>
 </main>
-<div class="footer">MCR Companion 2.0 • central hotel-config</div>
+<div class="footer">MCR Companion 2.1 • central hotel-config</div>
 <script src="js/config.js"></script>
 <script src="js/state.js"></script>
 <script src="js/utils.js"></script>
@@ -117,6 +140,7 @@
 <script src="js/ryanair.js"></script>
 <script src="js/journal.js"></script>
 <script src="js/routes.js"></script>
+<script src="js/assistant.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

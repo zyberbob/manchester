@@ -1,5 +1,5 @@
-# MCR Companion 2.0
+# MCR Companion 2.1
 
-Clean modular rebuild. Hotel is controlled from js/config.js and data config.
+All-in version: hotel config, weather, maps, budget, Ryanair, packing, journal, walking tours, suggestions.
 
 Upload all files/folders to GitHub Pages repo root.

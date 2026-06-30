@@ -494,5 +494,159 @@
     "vibe": [
       "nød"
     ]
+  },
+  {
+    "id": "coop",
+    "cat": "Praktisk",
+    "emoji": "🛒",
+    "name": "Co-op Food Northern Quarter",
+    "address": "Co-op Food Northern Quarter Manchester, United Kingdom",
+    "lat": 53.4841,
+    "lng": -2.2361,
+    "walk": "3-6 min",
+    "note": "Vand, snacks og småting tæt på hotellet.",
+    "top": false,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk",
+      "billigt"
+    ]
+  },
+  {
+    "id": "mnsfood",
+    "cat": "Praktisk",
+    "emoji": "🛒",
+    "name": "M&S Food Manchester",
+    "address": "M&S Food Manchester City Centre, United Kingdom",
+    "lat": 53.4839,
+    "lng": -2.2416,
+    "walk": "6-9 min",
+    "note": "Lidt bedre snacks, vand og småting.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk",
+      "shopping"
+    ]
+  },
+  {
+    "id": "federal",
+    "cat": "Mad",
+    "emoji": "☕",
+    "name": "Federal Café Northern Quarter",
+    "address": "Federal Cafe Northern Quarter Manchester, United Kingdom",
+    "lat": 53.4834,
+    "lng": -2.2364,
+    "walk": "4-6 min",
+    "note": "Populær café/brunch tæt på hotellet.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "kaffe",
+      "sulten"
+    ]
+  },
+  {
+    "id": "blackmilk",
+    "cat": "Mad",
+    "emoji": "🍩",
+    "name": "Black Milk Northern Quarter",
+    "address": "Black Milk Northern Quarter Manchester, United Kingdom",
+    "lat": 53.483,
+    "lng": -2.2372,
+    "walk": "5-7 min",
+    "note": "Dessert, shakes og sødt.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "kaffe",
+      "snack"
+    ]
+  },
+  {
+    "id": "atm_arndale",
+    "cat": "Praktisk",
+    "emoji": "🏧",
+    "name": "ATM near Arndale",
+    "address": "ATM Manchester Arndale Manchester, United Kingdom",
+    "lat": 53.4833,
+    "lng": -2.242,
+    "walk": "6-8 min",
+    "note": "Hæveautomat omkring Arndale.",
+    "top": false,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk"
+    ]
+  },
+  {
+    "id": "publictoilet",
+    "cat": "Praktisk",
+    "emoji": "🚻",
+    "name": "Toilets Arndale / Printworks area",
+    "address": "Public toilets Manchester Arndale Manchester, United Kingdom",
+    "lat": 53.484,
+    "lng": -2.241,
+    "walk": "5-8 min",
+    "note": "Arndale/Printworks som praktisk toilet-backup.",
+    "top": false,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "praktisk"
+    ]
+  },
+  {
+    "id": "canalstreet",
+    "cat": "Oplevelser",
+    "emoji": "🌈",
+    "name": "Canal Street",
+    "address": "Canal Street, Manchester, United Kingdom",
+    "lat": 53.4779,
+    "lng": -2.2375,
+    "walk": "12-15 min",
+    "note": "Kendt område til en lille aftengåtur.",
+    "top": false,
+    "persona": [
+      "Begge"
+    ],
+    "vibe": [
+      "aften",
+      "gåtur"
+    ]
+  },
+  {
+    "id": "johnrylands",
+    "cat": "Oplevelser",
+    "emoji": "📚",
+    "name": "John Rylands Library",
+    "address": "150 Deansgate, Manchester M3 3EH, United Kingdom",
+    "lat": 53.4805,
+    "lng": -2.2487,
+    "walk": "18-22 min",
+    "note": "Meget flot bibliotek. God regnvejrs-/foto-oplevelse.",
+    "top": false,
+    "persona": [
+      "Emily",
+      "Begge"
+    ],
+    "vibe": [
+      "regnvejr",
+      "gåtur"
+    ]
   }
 ]
