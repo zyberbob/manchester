@@ -1,7 +1,7 @@
 {
-  "name": "Manchester Ultimate Companion",
-  "short_name": "Manchester",
-  "description": "Manchester guide for Jonas og Emily",
+  "name": "MCR Companion",
+  "short_name": "MCR",
+  "description": "Manchester 2026 companion for Jonas og Emily",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
