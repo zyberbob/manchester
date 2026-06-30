@@ -1,3 +1,3 @@
-# MCR Companion v9
+# MCR Companion v10
 
-Stable map + weather version. Upload all files to GitHub Pages root.
+Stable full version with map and weather.
