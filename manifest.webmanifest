@@ -1,7 +1,7 @@
 {
   "name": "Manchester Ultimate Companion",
   "short_name": "Manchester",
-  "description": "Offline/online Manchester guide for Jonas og datter",
+  "description": "Manchester guide for Jonas og Emily",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
